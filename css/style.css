@@ -18,7 +18,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(174,221,245, 0.8);
+    background-color: rgba(116, 159, 230, 0.8);
     width: 100%;
 }
 
@@ -60,15 +60,47 @@ img {
     text-align: center;
 }
 
-.drop.btn {
-    background-color: white;
+.dropbtn {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
     color: black;
     padding: 16px;
     font-size: 18px;
-    border: 1px solid #aeddf5;
+    border: 2px solid #2b64cf;
     margin: 25px 25px 0 25px;
     width: 220px;
     border-radius: 5px;
+}
+
+.dropbtn.blue:hover {
+    background-color: rgba(27, 47, 233, 0.4);
+}
+
+.dropbtn.orange {
+    color: #c05107;
+    border-color: #c05107;
+}
+
+.dropbtn.orange:hover {
+    background-color: rgba(236, 165, 132, 0.4);
+}
+
+.dropbtn.red {
+    color: #b31313;
+    border-color: #b31313;
+}
+
+.dropbtn.red:hover {
+    background-color: rgba(241, 107, 107, 0.4);
+}
+
+.dropbtn.green {
+    color: #084d08;
+    border-color: #084d08;
+}
+
+.dropbtn.green:hover {
+    background-color: rgba(152, 235, 84, 0.582);
 }
 
 .dropdown {
@@ -105,9 +137,7 @@ img {
     display: block;
 }
 
-.dropdown:hover .drop.btn {
-    background-color: rgba(174,221,245, 0.5);
-}
+
 
 .wrapper {
     display: flex;
@@ -131,6 +161,52 @@ img {
 .sociallink img {
     margin: 0 10px;
 }
+
+.sociallink a:hover {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce;
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+  }
+  
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
 
 .footer {
     display: flex; 
